@@ -6,13 +6,13 @@ A playful, fully client-side 3D fighting game. Choose Adarsh, Gabriel, or Joel, 
 
 Open the game on a **touchscreen phone in portrait orientation**. Desktop keyboard play is disabled. Rotating to landscape pauses the match.
 
-- Left-side direction pad: move around the rooftop.
-- Punch and Kick: close-range attacks.
+- Drag the left thumbstick: analog movement around the rooftop.
+- Punch and Kick: tap for an attack, or hold to repeat when the fighter is ready.
 - Block: hold to reduce incoming damage.
 - Named move button: Guitar smash, Beer bash, or Laptop smash. It uses the energy bar, which recharges.
 - Pause: take a break or return to fighter selection.
 
-Sound starts off. Three difficulty levels change the opponent's speed and aggression. The game pauses when you leave its tab. Win two rounds to win the match.
+Sound starts on your first tap; there is no in-game mute control. Three difficulty levels change the opponent's speed and aggression. Attacks have articulated elbows and knees, body wind-up, contact frames, and recoil. Named moves pop up on screen with impact bursts. The game pauses when you leave its tab. Win two rounds to win the match.
 
 ### The fighters
 
