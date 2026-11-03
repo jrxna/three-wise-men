@@ -12,7 +12,7 @@ Open the game on a **touchscreen phone in portrait orientation**. Desktop keyboa
 - Named move button: Guitar smash, Beer bash, or Laptop smash. It uses the energy bar, which recharges.
 - Pause: take a break or return to fighter selection.
 
-Sound starts on your first tap; there is no in-game mute control. Three difficulty levels change the opponent's speed and aggression. Attacks have articulated elbows and knees, body wind-up, contact frames, and recoil. Named moves pop up on screen with impact bursts. The game pauses when you leave its tab. Win two rounds to win the match.
+Sound starts on your first tap; there is no in-game mute control. Three difficulty levels change the opponent's speed and aggression. Fighters use rounded models with independent head, torso, hips, elbows, and knees. Walking uses a two-bone leg solver, punches alternate hands, kicks chamber and extend, and guarding uses a sustained forearm stance. Attacks have body wind-up, contact frames, and recoil. Guitar strings, laptop keys and lid, and a shattering beer mug give named moves distinct props and contact effects. Named moves pop up on screen with impact bursts. The game pauses when you leave its tab. Win two rounds to win the match.
 
 ### The fighters
 

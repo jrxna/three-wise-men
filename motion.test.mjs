@@ -17,3 +17,16 @@ test('thumbstick preserves analog movement and clamps diagonal drags',()=>{
   assert.equal(Math.sign(v.x),Math.sign(x));assert.equal(Math.sign(v.y),Math.sign(y));
  }
 });
+
+import {combatPose,plantedLeg} from './pose.js';
+test('a kick chambers its knee and extends at contact',()=>{
+ const m=moves.kick,wind=combatPose('kick',m.hit*.68,m),contact=combatPose('kick',m.hit,m);
+ assert.ok(wind.knees[1]>1.8);assert.ok(Math.abs(contact.knees[1])<.001);
+ assert.ok(contact.legs[1][0]<-1.5);
+});
+test('alternating punches mirror the torso and extend the chosen elbow',()=>{
+ for(const hand of [0,1]){const p=combatPose('punch',moves.punch.hit,moves.punch,hand);assert.equal(p.elbows[hand],0);assert.ok(p.elbows[1-hand]<-1);assert.equal(Math.sign(p.chest[1]),hand===1?1:-1);}
+});
+test('leg solver plants an ankle at the requested stride and lift',()=>{
+ for(const z of [-.2,0,.2])for(const lift of [0,.1]){const p=plantedLeg(z,lift);const resultZ=-.34*Math.sin(p.hip)-.34*Math.sin(p.hip+p.knee),down=.34*Math.cos(p.hip)+.34*Math.cos(p.hip+p.knee);assert.ok(Math.abs(resultZ-z)<1e-8);assert.ok(Math.abs(down-(.64-lift))<1e-8);}
+});
