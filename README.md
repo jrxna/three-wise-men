@@ -1,6 +1,6 @@
 # Three Wise Men
 
-A playful, fully client-side 3D fighting game. Choose Adarsh, Gabriel, or Joel, then choose a different friend as your computer opponent. Win two rounds to settle the rooftop rivalry.
+A playful, fully client-side 3D fighting game. Choose Adarsh, Gabriel, or Joel, then choose a different friend as your computer opponent. Win two rounds to settle the Paripoorna hostel rivalry.
 
 ## Play
 
