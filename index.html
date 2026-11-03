@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c1019">
+  <meta name="description" content="Three friends. One rooftop. Choose Adarsh, Gabriel, or Joel in a playful 3D browser fighting game.">
+  <title>Three Wise Men | Rooftop Rumble</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="game">
+    <canvas id="arena" aria-label="3D rooftop fighting arena"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar"><a class="wordmark" href="./"><span class="mark">3</span> Three Wise Men</a><div class="top-actions"><span class="edition">Rooftop Rumble</span><button id="sound" aria-label="Enable sound" title="Toggle sound">Sound off</button><button id="pause" hidden>Pause</button></div></header>
+    <section id="selection" class="selection">
+      <div class="intro"><span class="eyebrow"><i></i> A friendly disagreement</span><h1>Three friends.<br>Zero chill.</h1><p>A guitar, a beer, and a questionable amount of code.<br>Pick your fighter. Settle it on the rooftop.</p></div>
+      <div class="selection-panel">
+        <div class="panel-heading"><h2>Choose your fighter</h2><span>01 / 02</span></div>
+        <div id="fighters" class="fighter-grid"></div>
+        <div class="opponent-row"><label for="opponent">Your opponent</label><select id="opponent"></select><label class="difficulty-label" for="difficulty">Difficulty</label><select id="difficulty"><option value="casual">Casual</option><option value="standard" selected>Standard</option><option value="hard">Hard</option></select></div>
+        <button id="start" class="primary">Enter the rooftop <span>↗</span></button>
+        <div class="mini-guide"><span><kbd>W A S D</kbd> Move</span><span><kbd>J</kbd> Punch</span><span><kbd>K</kbd> Kick</span><span><kbd>L</kbd> Special</span><span><kbd>Space</kbd> Block</span><span><kbd>Shift</kbd> Dash</span></div>
+      </div>
+      <div class="scene-note"><span class="live-dot"></span> Built for your touchscreen.</div>
+    </section>
+    <section id="hud" class="hud" hidden aria-label="Match status">
+      <div class="fighter-hud"><div class="hud-name"><span id="player-name"></span><small>You <span id="player-rounds">○ ○</span></small></div><div class="health"><i id="player-health"></i></div><div class="energy"><i id="player-energy"></i></div><span id="player-special" class="special-status"></span></div>
+      <div class="clock"><strong id="timer">90</strong><span id="round-label">Round 1</span></div>
+      <div class="fighter-hud enemy"><div class="hud-name"><span id="enemy-name"></span><small>CPU <span id="enemy-rounds">○ ○</span></small></div><div class="health"><i id="enemy-health"></i></div><div class="energy"><i id="enemy-energy"></i></div><span id="enemy-special" class="special-status"></span></div>
+    </section>
+    <div id="announcement" class="announcement" role="status" aria-live="polite"></div>
+    <div id="hit-label" class="hit-label" aria-hidden="true"></div>
+    <div id="fight-help" class="fight-help" hidden><span><kbd>J</kbd> Punch</span><span><kbd>K</kbd> Kick</span><span><kbd>L</kbd> Special</span><span><kbd>Space</kbd> Block</span><span><kbd>Esc</kbd> Pause</span></div>
+    <div id="touch" class="touch" hidden><div class="dpad"><button data-hold="w" aria-label="Move back">↑</button><button data-hold="a" aria-label="Move left">←</button><button data-hold="s" aria-label="Move forward">↓</button><button data-hold="d" aria-label="Move right">→</button></div><div class="touch-attacks"><button data-action="punch">Punch</button><button data-action="kick">Kick</button><button data-hold=" " >Block</button><button data-action="special" class="special-touch">Special</button></div></div>
+    <section id="result" class="modal" hidden><div class="modal-card"><span id="result-eyebrow" class="eyebrow">Rivalry resolved</span><h2 id="result-title"></h2><p id="result-copy"></p><button id="rematch" class="primary">Run it back <span>↻</span></button><button id="reselect" class="secondary">Choose fighters</button></div></section>
+    <section id="paused" class="modal" hidden><div class="modal-card"><span class="eyebrow">Take a breather</span><h2>On a break.</h2><p>The rooftop can wait.</p><button id="resume" class="primary">Back to it <span>→</span></button><button id="quit" class="secondary">Choose fighters</button></div></section>
+    <div id="rotate" class="modal" hidden><div class="modal-card"><span class="eyebrow">Portrait only</span><h2>Turn it upright.</h2><p>Rotate your phone to portrait mode to return to the rooftop. Your match is paused.</p></div></div>
+    <div id="error" class="modal" hidden><div class="modal-card"><h2>A little more graphics power.</h2><p>This game needs WebGL 2. Try a current Chrome, Safari, Firefox, or Edge with hardware acceleration enabled.</p></div></div>
+    <footer id="footer"><span>Built for the friendly rivalry.</span><span>Mobile touch · Best of three · No accounts</span></footer>
+  </main>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
